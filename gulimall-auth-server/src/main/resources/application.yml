@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: gulimall-auth-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  thymeleaf:
+    cache: false
+  redis:
+    host: 192.168.81.133
+    port: 6379
+  session:
+    store-type: redis
+
+server:
+  port: 20000
+  servlet:
+    session:
+      timeout: 30m
+gitee:
+  oauth:
+    clientid: e9565c3093c97812675dd88c8d876ac62274b568e297f2049efb98ba4034a5be
+    clientsecret: 3bae00da38c6d59f90b1b9f06a369064177ab49df863801419e81f6b5a1822c4
+    callback: http://auth.gulimall.com/oauth2.0/gitee/success
