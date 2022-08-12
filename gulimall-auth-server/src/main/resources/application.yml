@@ -20,6 +20,6 @@ server:
       timeout: 30m
 gitee:
   oauth:
-    clientid: e9565c3093c97812675dd88c8d876ac62274b568e297f2049efb98ba4034a5be
-    clientsecret: 3bae00da38c6d59f90b1b9f06a369064177ab49df863801419e81f6b5a1822c4
-    callback: http://auth.gulimall.com/oauth2.0/gitee/success
+    clientid: 
+    clientsecret:
+    callback:
