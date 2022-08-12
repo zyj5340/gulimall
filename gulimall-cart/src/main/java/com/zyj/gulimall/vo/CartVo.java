@@ -47,7 +47,9 @@ public class CartVo {
         BigDecimal amount = new BigDecimal("0");
         if (items != null && items.size() > 0) {
             for (CartItemVo item : items) {
-                amount = amount.add(item.getTotalPrice());
+                if (item.getCheck() == true) {
+                    amount = amount.add(item.getTotalPrice());
+                }
             }
         }
 

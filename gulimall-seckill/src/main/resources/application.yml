@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: gulimall-seckill
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  redis:
+    host: 192.168.81.133
+    port: 6379
+  task:
+    execution:
+      pool:
+        core-size: 20
+        max-size: 50
+  session:
+    store-type: redis
+  rabbitmq:
+    virtual-host: /
+    host: 192.168.81.133
+
+server:
+  port: 25000

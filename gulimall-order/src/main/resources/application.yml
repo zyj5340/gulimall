@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.81.133:3306/gulimall_oms?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    alibaba:
+      seata:
+        tx-service-group: gulimall-order
+  application:
+    name: gulimall-order
+  rabbitmq:
+    host: 192.168.81.133
+    port: 5672
+    virtual-host: /
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true
+    listener:
+      simple:
+        acknowledge-mode: manual #手动ack
+    username: guest
+    password: guest
+  thymeleaf:
+    cache: false
+  session:
+    store-type: redis
+  redis:
+    host: 192.168.81.133
+    port: 6379
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+gulimall:
+  thread:
+    core-size: 10
+    max-size: 20
+    keep-alive-time: 20
+
+server:
+  port: 9000

@@ -2,6 +2,7 @@ package com.zyj.gulimall.vo;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
  * @date 2022/6/16
  * 购物项
  */
-public class CartItemVo {
+public class CartItemVo{
     private Long skuId;
     private Boolean check = true;
     private String title;
@@ -19,6 +20,9 @@ public class CartItemVo {
     private BigDecimal price;
     private Integer count;
     private BigDecimal totalPrice;
+
+    public CartItemVo() {
+    }
 
     public Long getSkuId() {
         return skuId;

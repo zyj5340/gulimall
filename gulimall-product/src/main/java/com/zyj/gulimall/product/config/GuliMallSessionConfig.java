@@ -1,5 +1,6 @@
 package com.zyj.gulimall.product.config;
 
+import com.alibaba.fastjson.parser.ParserConfig;
 import com.alibaba.fastjson.support.spring.GenericFastJsonRedisSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +20,6 @@ public class GuliMallSessionConfig {
         DefaultCookieSerializer serializer = new DefaultCookieSerializer();
         serializer.setDomainName("gulimall.com");
         serializer.setCookieName("GULISESSION");
-
         return serializer;
     }
 

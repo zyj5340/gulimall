@@ -1,6 +1,7 @@
 package com.zyj.gulimall.vo;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author Zyj

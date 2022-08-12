@@ -19,7 +19,6 @@ public class GuliMallSessionConfig {
         serializer.setDomainName("gulimall.com");
         serializer.setCookieName("GULISESSION");
 
-
         return serializer;
     }
 

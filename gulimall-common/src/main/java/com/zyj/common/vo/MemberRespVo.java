@@ -10,7 +10,7 @@ import java.util.Date;
  * @date 2022/6/14
  */
 @Data
-public class MemberRespVo implements Serializable {
+public class MemberRespVo {
     /**
      * id
      */

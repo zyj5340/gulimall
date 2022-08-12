@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.websocket.server.PathParam;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -22,4 +23,7 @@ public interface ProductFeignService {
 
     @GetMapping("/product/skusaleattrvalue/stringlist/{skuId}")
     public List<String> getSkuSaleAttr(@PathVariable("skuId")Long skuId);
+
+    @GetMapping("/product/skuinfo/{skuId}/price")
+    public String getPrice(@PathVariable("skuId") Long skuId);
 }

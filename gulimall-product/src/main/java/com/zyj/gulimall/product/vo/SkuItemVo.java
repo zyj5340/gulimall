@@ -30,6 +30,9 @@ public class SkuItemVo {
     //6.是否有货
     boolean hasStock = true;
 
+    //当前商品的秒杀优惠信息
+    SeckillInfoVo seckillInfo;
+
     @Data
     public static class SkuItemSaleAttrsVo {
         private Long attrId;
